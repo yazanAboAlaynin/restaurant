@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Bill;
 use App\Casher;
+use App\Category;
 use App\Http\Controllers\Controller;
+use App\Meal;
+use App\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Intervention\Image\Facades\Image;
 use Yajra\DataTables\Facades\DataTables;
 
 class AdminController extends Controller
@@ -23,10 +28,6 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.home');
-    }
-
-    public function casher(){
-        return view('admin.cashers');
     }
 
     public function createCasher(){
@@ -96,5 +97,217 @@ class AdminController extends Controller
         Casher::destroy($request->id);
         return response([],200);
     }
+
+    /****************************************************/
+
+    public function createCategory(){
+        return view('admin.create-category');
+    }
+
+    public function storeCategory(Request $request){
+        $request->validate([
+            'name'=>'required',
+            'image' => 'required|image'
+        ]);
+        $imagePath = "";
+        if ($files = $request->file('image')) {
+            $imagePath = $request->file('image')->store('images', 'public');
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1500, 1500);
+            $image->save();
+        }
+        $category = new Category();
+        $category->name = $request['name'];
+        $category->image = $imagePath;
+        $category->save();
+
+        return redirect('admin/categories');
+    }
+
+    public function categories(Request $request){
+
+        if($request->ajax())
+        {
+            $data = Category::latest()->get();
+            return DataTables::of($data)
+                ->addColumn('action', function($data){
+                    $button = '<button type="button" name="edit" id="'.$data->id.'" 
+                    class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
+                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'" 
+                    class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
+
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('admin.categories');
+
+    }
+
+    public function editCategory(Category $category){
+
+        return view('admin.edit-category',compact('category'));
+    }
+
+    public function updateCategory(Request $request,Category $category){
+        $request->validate([
+            'name'=>'required',
+        ]);
+        $category->name = $request['name'];
+        $category->save();
+
+        return redirect()->route('admin.categories');
+    }
+
+    public function deleteCategory(Request $request){
+        Category::destroy($request->id);
+        return response([],200);
+    }
+
+    /****************************************************/
+
+    public function createMeal(){
+        return view('admin.create-meal');
+    }
+
+    public function storeMeal(Request $request){
+        $request->validate([
+            'name'=>'required',
+            'image' => 'required|image',
+            'description' => 'required',
+            'price' => 'required',
+        ]);
+        $imagePath = "";
+        if ($files = $request->file('image')) {
+            $imagePath = $request->file('image')->store('images', 'public');
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1500, 1500);
+            $image->save();
+        }
+        $meal = new Meal();
+        $meal->name = $request['name'];
+        $meal->image = $imagePath;
+        $meal->description = $request['description'];
+        $meal->price = $request['price'];
+        $meal->save();
+
+        return redirect('admin/meals');
+    }
+
+    public function meals(Request $request){
+
+        if($request->ajax())
+        {
+            $data = Meal::latest()->get();
+            return DataTables::of($data)
+                ->addColumn('action', function($data){
+                    $button = '<button type="button" name="edit" id="'.$data->id.'" 
+                    class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
+                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'" 
+                    class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
+
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('admin.meals');
+
+    }
+
+    public function editMeal(Meal $meal){
+
+        return view('admin.edit-meal',compact('meal'));
+    }
+
+    public function updateMeal(Request $request,Meal $meal){
+        $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'price'=>'required',
+        ]);
+        $meal->name = $request['name'];
+        $meal->description = $request['description'];
+        $meal->price = $request['price'];
+        $meal->save();
+
+        return redirect()->route('admin.meals');
+    }
+
+    public function deleteMeal(Request $request){
+        Meal::destroy($request->id);
+        return response([],200);
+    }
+
+    /*************************************************/
+
+    public function reservations(Request $request){
+
+        if($request->ajax())
+        {
+            $data = Reservation::latest()->with('user')->get();
+
+            return DataTables::of($data)
+                ->addColumn('action', function($data){
+                    $button = '<button type="button" name="edit" id="'.$data->id.'" 
+                    class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
+                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'" 
+                    class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
+
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('admin.reservations');
+
+    }
+
+    public function editReservation(Reservation $reservation){
+
+        return view('admin.edit-reservation',compact('reservation'));
+    }
+
+    public function updateReservation(Request $request,Reservation $reservation){
+        $request->validate([
+
+        ]);
+        //$reservation->name = $request['name'];
+
+        $reservation->save();
+
+        return redirect()->route('admin.reservation');
+    }
+
+    public function deleteReservation(Request $request){
+        Reservation::destroy($request->id);
+        return response([],200);
+    }
+
+    /*************************************************/
+    public function bills(Request $request){
+
+        if($request->ajax())
+        {
+            $data = Bill::latest()->get();
+            return DataTables::of($data)
+                ->addColumn('action', function($data){
+                    $button = '<button type="button" name="edit" id="'.$data->id.'" 
+                    class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
+                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'" 
+                    class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
+
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('admin.bills');
+
+    }
+
 
 }

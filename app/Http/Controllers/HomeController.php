@@ -25,4 +25,16 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function reservation(Request $request){
+        return view('user.reservation');
+    }
+
+    public function reserve(Request $request){
+        $request->validate([
+           'date'=> 'required',
+        ]);
+
+
+    }
 }

@@ -46,6 +46,11 @@ return [
             'provider' => 'admins'
         ],
 
+        'casher' => [
+            'driver' => 'session',
+            'provider' => 'cashers'
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -78,7 +83,14 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
+        ],
+
+        'cashers' => [
+            'driver' => 'eloquent',
+            'model' => App\Casher::class,
         ]
+
+
 
         // 'users' => [
         //     'driver' => 'database',
