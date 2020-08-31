@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/k2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/k4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Restaurant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Restaurant.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/home.blade.php" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
@@ -153,86 +108,10 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1geC6h9T7MsuLA3kz1nxcKIZckb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
-    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\casher" />
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\user" />
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\casher\auth" />
-      <recent name="C:\xampp\htdocs\Restaurant\app\Http\Controllers\Casher" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="" />
-      <created>1597771554858</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1597771554858</updated>
-      <workItem from="1597771557794" duration="7174000" />
-      <workItem from="1597856540870" duration="8100000" />
-      <workItem from="1597905205880" duration="25000" />
-      <workItem from="1598121112296" duration="6491000" />
-      <workItem from="1598465498842" duration="137000" />
-      <workItem from="1598621054606" duration="35000" />
-      <workItem from="1598898120091" duration="3767000" />
-    </task>
-    <task id="LOCAL-00001" summary="latest">
-      <created>1598127294461</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1598127294461</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="latest" />
-    <option name="LAST_COMMIT_MESSAGE" value="latest" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598621087251">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598621087251" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
 </project>
