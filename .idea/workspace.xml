@@ -19,20 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/k2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/k4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Restaurant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Restaurant.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/home.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="latest" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +186,7 @@
       <workItem from="1598121112296" duration="6491000" />
       <workItem from="1598465498842" duration="137000" />
       <workItem from="1598621054606" duration="35000" />
-      <workItem from="1598898120091" duration="3767000" />
+      <workItem from="1598898120091" duration="4244000" />
     </task>
     <task id="LOCAL-00001" summary="latest">
       <created>1598127294461</created>
@@ -208,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598127294461</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="latest">
+      <created>1598902240433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598902240433</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
