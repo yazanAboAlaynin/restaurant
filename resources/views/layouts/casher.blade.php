@@ -117,37 +117,14 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{route('admin.home')}}">HOME</a></li>
+                <li><a href="{{route('casher.home')}}">HOME</a></li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cashers <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{route('admin.cashers')}}">View Casher</a></li>
-                        <li><a href="{{route('admin.create.casher')}}">Create Casher</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{route('admin.categories')}}">View Categories</a></li>
-                        <li><a href="{{route('admin.create.category')}}">Create Category</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meal <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{route('admin.meals')}}">View Meal</a></li>
-                        <li><a href="{{route('admin.create.meal')}}">Create Meal</a></li>
-                    </ul>
-                </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservations <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{route('admin.reservations')}}">View Reservations</a></li>
-{{--                        <li><a href="{{route('admin.create.')}}">Create Reservation</a></li>--}}
+                        <li><a href="{{route('casher.reservations')}}">View Reservations</a></li>
+                        <li><a href="{{route('casher.create.reservation')}}">Create Reservation</a></li>
                     </ul>
                 </li>
                 <li><a class="" href="{{ route('logout') }}"

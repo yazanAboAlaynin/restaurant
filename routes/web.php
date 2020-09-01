@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/reservation', 'HomeController@reservation')->name('reservation');
+Route::post('/reserve', 'HomeController@reserve')->name('reserve');
 
 
 Route::namespace('Admin')->prefix('admin')->as('admin.')->group(function() {
@@ -62,6 +63,7 @@ Route::namespace('Casher')->prefix('casher')->as('casher.')->group(function() {
     Route::get('/home', 'CasherController@index')->name('home');
 
     Route::get('/reservations', 'CasherController@reservations')->name('reservations');
+    Route::get('/create/reservation', 'CasherController@createReservation')->name('create.reservation');
     Route::get('/reservation/{reservation}/edit', 'CasherController@editReservation')->name('edit.reservation');
     Route::post('/reservation/{reservation}/update', 'CasherController@updateReservation')->name('update.reservation');
     Route::post('/reservation/delete', 'CasherController@deleteReservation')->name('delete.reservation');

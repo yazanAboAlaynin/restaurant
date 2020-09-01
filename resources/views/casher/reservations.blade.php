@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.casher')
 
 @section('content')
 
@@ -19,7 +19,6 @@
                 <th>user name</th>
 
                 <th>date</th>
-                <th>time</th>
 
 
                 <th>persons number</th>
@@ -60,7 +59,6 @@
                         "searchable": true
                     },
                     {data: 'date', name: 'date'},
-                    {data: 'time', name: 'time'},
                     {data: 'persons_number', name: 'persons_number'},
 
                     {data: 'action', name: 'action', orderable: false, searchable: false},

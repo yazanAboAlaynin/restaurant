@@ -26,7 +26,7 @@ class CasherController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('casher.home');
     }
 
     public function reservations(Request $request){
@@ -37,9 +37,9 @@ class CasherController extends Controller
 
             return DataTables::of($data)
                 ->addColumn('action', function($data){
-                    $button = '<button type="button" name="edit" id="'.$data->id.'" 
+                    $button = '<button type="button" name="edit" id="'.$data->id.'"
                     class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
-                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'" 
+                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'"
                     class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
 
                     return $button;
