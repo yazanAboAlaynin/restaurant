@@ -19,30 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="latest">
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/add-order.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/edit-order.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/edit-reservation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/orders.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/reservation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/casher2.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/casher3.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Casher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Casher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Meal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reservation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_19_181731_create_reservations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_19_181731_create_reservations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/create-meal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-meal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/casher/reservations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/casher/reservations.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/casher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/casher.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/reservation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="latest" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,7 +191,7 @@
       <workItem from="1599067269691" duration="5924000" />
       <workItem from="1599153873742" duration="5596000" />
       <workItem from="1599202857339" duration="68000" />
-      <workItem from="1599225725324" duration="5990000" />
+      <workItem from="1599225725324" duration="6422000" />
     </task>
     <task id="LOCAL-00001" summary="latest">
       <created>1598127294461</created>
@@ -244,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598989599969</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="latest">
+      <created>1599232034356</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599232034356</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,5 +259,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1598989602064" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php</url>
+          <line>121</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
