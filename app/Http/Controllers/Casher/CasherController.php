@@ -129,7 +129,6 @@ class CasherController extends Controller
 
     public function editOrder(Request $request,Reservation_item $order)
     {
-
         return view('casher.edit-order',compact('order'));
     }
     public function updateOrder(Request $request,Reservation_item $order){
@@ -139,14 +138,15 @@ class CasherController extends Controller
         ]);
 
         $order->quantity = $request->quantity;
-        $order->tot_price = $order->tot_price*$request->quantity;
+        $order->tot_price = $order->meal()->get()[0]->price*$request->quantity;
         $order->save();
 
         return redirect()->route('casher.reservations');
     }
 
     public function orders(Request $request,Reservation $reservation){
-
+        $data = Reservation_item::where('reservation_id',$reservation->id)->get();
+        $total = $data->sum('tot_price');
         if($request->ajax())
         {
             $data = Reservation_item::where('reservation_id',$reservation->id)->get();
@@ -163,9 +163,15 @@ class CasherController extends Controller
                 })
                 ->rawColumns(['action'])
                 ->make(true);
+
         }
 
-        return view('casher.orders',compact('reservation'));
+        return view('casher.orders',compact('reservation','total'));
 
+    }
+
+    public function deleteOrder(Request $request){
+        Reservation_item::destroy($request->id);
+        return;
     }
 }

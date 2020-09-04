@@ -54,6 +54,8 @@ Route::namespace('Admin')->prefix('admin')->as('admin.')->group(function() {
     Route::get('/reservation/{reservation}/edit', 'AdminController@editReservation')->name('edit.reservation');
     Route::post('/reservation/{reservation}/update', 'AdminController@updateReservation')->name('update.reservation');
     Route::post('/reservation/delete', 'AdminController@deleteReservation')->name('delete.reservation');
+    Route::get('/reservation/{reservation}/orders', 'AdminController@orders')->name('orders');
+    Route::post('/order/delete', 'AdminController@deleteOrder')->name('delete.order');
 
 
 });

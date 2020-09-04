@@ -8,6 +8,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Meal;
 use App\Reservation;
+use App\Reservation_item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
@@ -253,10 +254,11 @@ class AdminController extends Controller
 
             return DataTables::of($data)
                 ->addColumn('action', function($data){
-                    $button = '<button type="button" name="edit" id="'.$data->id.'"
-                    class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
+                    $button = '<div class="btn-group" role="group">';
                     $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'"
                     class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
+                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="orders" id="'.$data->id.'"
+                    class="delete btn btn-success btn-sm" onclick=orders('.$data->id.')>Orders</button></div>';
 
                     return $button;
                 })
@@ -290,26 +292,34 @@ class AdminController extends Controller
     }
 
     /*************************************************/
-    public function bills(Request $request){
 
+    public function orders(Request $request,Reservation $reservation){
+
+        $data = Reservation_item::where('reservation_id',$reservation->id)->get();
+        $total = $data->sum('tot_price');
         if($request->ajax())
         {
-            $data = Bill::latest()->get();
+            $data = Reservation_item::where('reservation_id',$reservation->id)->get();
+
             return DataTables::of($data)
                 ->addColumn('action', function($data){
-                    $button = '<button type="button" name="edit" id="'.$data->id.'"
-                    class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
+                    $button = '<div class="btn-group" role="group" aria-label="Basic example">';
                     $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'"
-                    class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
+                    class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button></div>';
 
                     return $button;
                 })
                 ->rawColumns(['action'])
                 ->make(true);
+
         }
 
-        return view('admin.bills');
+        return view('admin.orders',compact('reservation','total'));
 
+    }
+    public function deleteOrder(Request $request){
+        Reservation_item::destroy($request->id);
+        return response([],200);
     }
 
 

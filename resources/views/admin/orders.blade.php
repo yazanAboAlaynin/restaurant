@@ -1,10 +1,10 @@
-@extends('layouts.admin')
+@extends('layouts.admin2')
 
 @section('content')
 
     <div class="container">
 
-        <h1>Categories:</h1>
+        <h1>Orders:</h1>
 
         <br/>
         <br/>
@@ -16,9 +16,12 @@
             <tr>
 
                 <th>id</th>
-
-
-                <th width="100px">Action</th>
+                <th>reservation id</th>
+                <th>meal id</th>
+                <th>casher id</th>
+                <th>quantity</th>
+                <th>tot_price</th>
+                <th>Action</th>
 
             </tr>
 
@@ -27,6 +30,16 @@
             <tbody>
 
             </tbody>
+
+            <tfoot>
+            <tr>
+                <th colspan="5"></th>
+                <th colspan="">Total</th>
+                <th id="total_order" >{{ $total }}</th>
+
+
+            </tr>
+            </tfoot>
 
         </table>
 
@@ -37,28 +50,22 @@
             var table = $('.data-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.categories') }}",
+                ajax: "{{ route('admin.orders',$reservation) }}",
                 columns: [
                     {data: 'id', name: 'id'},
-                    {
-                        "name": "image",
-                        "data": "image",
-                        "render": function (data, type, full, meta) {
-                            return "<img src=\"/storage/" + data + "\" height=\"60\" />";
-                        },
-                        "title": "Image",
-                        "orderable": true,
-                        "searchable": true
-                    },
-                    {data: 'name', name: 'name'},
+                    {data: 'reservation_id', name: 'reservation_id'},
+                    {data: 'meal_id', name: 'meal_id'},
+                    {data: 'casher_id', name: 'casher_id'},
 
+                    {data: 'quantity', name: 'quantity'},
+                    {data: 'tot_price', name: 'tot_price'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
+
                 ]
             });
         });
-        function update(id) {
-            window.location.href = 'category/'+id+'/edit';
-        }
+
+
         function del(id) {
 
             $.ajax({
@@ -69,7 +76,7 @@
                 },
                 type:'POST',
 
-                url:'{{ route("admin.delete.category") }}',
+                url:'{{ route("admin.delete.order") }}',
 
                 data:{id:id},
 

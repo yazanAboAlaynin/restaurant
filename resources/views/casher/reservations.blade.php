@@ -57,7 +57,7 @@
             });
         });
         function update(id) {
-            window.location.href = 'casher/reservation/'+id+'/edit';
+            window.location.href = '/casher/reservation/'+id+'/edit';
         }
 
         function order(id) {

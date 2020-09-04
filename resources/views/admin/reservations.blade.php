@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin2')
 
 @section('content')
 
@@ -16,17 +16,16 @@
             <tr>
 
                 <th>id</th>
-                <th>name</th>
+                <th>user name</th>
 
                 <th>date</th>
-                <th>time</th>
 
 
                 <th>persons number</th>
 
 
 
-                <th width="100px">Action</th>
+                <th width="120px">Action</th>
 
             </tr>
 
@@ -48,28 +47,19 @@
                 ajax: "{{ route('admin.reservations') }}",
                 columns: [
                     {data: 'id', name: 'id'},
-                    {
-                        "name": "user",
-                        "data": "user",
-                        "render": function (data, type, full, meta) {
+                    {data: 'user_id', name: 'user_id'},
 
-                            return data['name'];
-                        },
-                        "title": "user name",
-                        "orderable": true,
-                        "searchable": true
-                    },
                     {data: 'date', name: 'date'},
-                    {data: 'time', name: 'time'},
-                    {data: 'persons_number', name: 'persons_number'},
+                    {data: 'number', name: 'number'},
 
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
         });
-        function update(id) {
-            window.location.href = 'reservation/'+id+'/edit';
+        function orders(id) {
+            window.location.href = 'reservation/'+id+'/orders';
         }
+
         function del(id) {
 
             $.ajax({

@@ -34,6 +34,16 @@
 
             </tbody>
 
+            <tfoot>
+            <tr>
+                <th colspan="5"></th>
+                <th colspan="">Total</th>
+                <th id="total_order" >{{ $total }}</th>
+
+
+            </tr>
+            </tfoot>
+
         </table>
 
     </div>
@@ -79,7 +89,7 @@
                 },
                 type:'POST',
 
-                url:'{{ route("casher.delete.reservation") }}',
+                url:'{{ route("casher.delete.order") }}',
 
                 data:{id:id},
 
