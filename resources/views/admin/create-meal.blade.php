@@ -11,7 +11,7 @@
                         <form method="POST" action="{{ route('admin.store.meal') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="name" class="col-md-2 col-form-label text-md-right">{{ __('Name') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
@@ -52,6 +52,24 @@
                                     </span>
                                     @enderror
                                 </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+
+                                <label for="category_id" class="col-md-4 control-label">category</label>
+                                <select class="form-control" name="category_id" id="category_id" required autofocus>
+                                    @foreach($categories as $c)
+                                        <option value = "{{ $c->id }}">{{ $c->name }}</option>
+                                    @endforeach
+                                </select>
+
+
+                                @if ($errors->has('category_id'))
+                                    <span class="help-block">
+                        <strong>{{ $errors->first('category_id') }}</strong>
+                        </span>
+                                @endif
+
                             </div>
 
                             <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">

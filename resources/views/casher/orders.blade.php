@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h1>Reservations:</h1>
+        <h1>Orders:</h1>
 
         <br/>
         <br/>
@@ -16,12 +16,11 @@
             <tr>
 
                 <th>id</th>
-                <th>user name</th>
-
-                <th>date</th>
-
-
-                <th>persons number</th>
+                <th>reservation id</th>
+                <th>meal id</th>
+                <th>casher id</th>
+                <th>quantity</th>
+                <th>tot_price</th>
 
 
 
@@ -44,20 +43,22 @@
             var table = $('.data-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('casher.reservations') }}",
+                ajax: "{{ route('casher.orders',$reservation) }}",
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'user_id', name: 'user_id'},
+                    {data: 'reservation_id', name: 'reservation_id'},
+                    {data: 'meal_id', name: 'meal_id'},
+                    {data: 'casher_id', name: 'casher_id'},
 
-                    {data: 'date', name: 'date'},
-                    {data: 'number', name: 'number'},
+                    {data: 'quantity', name: 'quantity'},
+                    {data: 'tot_price', name: 'tot_price'},
 
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
         });
         function update(id) {
-            window.location.href = 'casher/reservation/'+id+'/edit';
+            window.location.href = '/casher/order/'+id+'/edit';
         }
 
         function order(id) {

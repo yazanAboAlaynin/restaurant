@@ -124,7 +124,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservations <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{route('casher.reservations')}}">View Reservations</a></li>
-                        <li><a href="{{route('casher.create.reservation')}}">Create Reservation</a></li>
+                        <li><a href="{{route('casher.reservation')}}">Create Reservation</a></li>
                     </ul>
                 </li>
                 <li><a class="" href="{{ route('logout') }}"

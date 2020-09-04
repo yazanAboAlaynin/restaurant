@@ -27,4 +27,8 @@ class Casher extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function reserveItems(){
+        return $this->hasMany(Reservation_item::class);
+    }
 }

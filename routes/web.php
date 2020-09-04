@@ -63,9 +63,17 @@ Route::namespace('Casher')->prefix('casher')->as('casher.')->group(function() {
     Route::get('/home', 'CasherController@index')->name('home');
 
     Route::get('/reservations', 'CasherController@reservations')->name('reservations');
-    Route::get('/create/reservation', 'CasherController@createReservation')->name('create.reservation');
+    Route::get('/reservation', 'CasherController@reservation')->name('reservation');
     Route::get('/reservation/{reservation}/edit', 'CasherController@editReservation')->name('edit.reservation');
     Route::post('/reservation/{reservation}/update', 'CasherController@updateReservation')->name('update.reservation');
     Route::post('/reservation/delete', 'CasherController@deleteReservation')->name('delete.reservation');
+    Route::post('/reserve', 'CasherController@reserve')->name('reserve');
+
+    Route::get('/reservation/{reservation}/orders', 'CasherController@orders')->name('orders');
+    Route::get('/order/{order}/edit', 'CasherController@editOrder')->name('edit.order');
+    Route::post('/order/{order}/update', 'CasherController@updateOrder')->name('update.order');
+    Route::post('/order/delete', 'CasherController@deleteOrder')->name('delete.order');
+    Route::get('/reservation/{reservation}/order', 'CasherController@addOrder')->name('add.order');
+    Route::post('/reservation/{reservation}/store/order', 'CasherController@storeOrder')->name('store.order');
 });
 

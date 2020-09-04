@@ -120,15 +120,6 @@
                 <li><a href="{{route('home')}}">HOME</a></li>
                 <li><a href="{{route('reservation')}}">Reserve</a></li>
 
-
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservations <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{route('admin.reservations')}}">View Reservations</a></li>
-{{--                        <li><a href="{{route('admin.create.')}}">Create Reservation</a></li>--}}
-                    </ul>
-                </li>
                 <li><a class="" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

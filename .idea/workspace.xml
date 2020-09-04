@@ -20,23 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="latest">
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/casher.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/add-order.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/edit-order.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/edit-reservation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/reservation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/casher2.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/casher3.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Casher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Casher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Meal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_19_181731_create_reservations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_19_181731_create_reservations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/create-casher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-casher.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/create-category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/create-meal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-meal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/edit-casher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/edit-casher.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/edit-category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/edit-category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/edit-meal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/edit-meal.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/casher/reservations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/casher/reservations.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/casher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/casher.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/reservation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -168,20 +171,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/casher" />
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\Restaurant\resources\views\casher" />
+      <recent name="C:\xampp\htdocs\Restaurant\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\Restaurant\public\images" />
       <recent name="C:\xampp\htdocs\Restaurant\resources\views\user" />
       <recent name="C:\xampp\htdocs\Restaurant\resources\views\casher\auth" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -207,7 +210,11 @@
       <workItem from="1598465498842" duration="137000" />
       <workItem from="1598621054606" duration="35000" />
       <workItem from="1598898120091" duration="4466000" />
-      <workItem from="1598980826075" duration="7547000" />
+      <workItem from="1598980826075" duration="7720000" />
+      <workItem from="1599067269691" duration="5924000" />
+      <workItem from="1599153873742" duration="5596000" />
+      <workItem from="1599202857339" duration="68000" />
+      <workItem from="1599225725324" duration="5990000" />
     </task>
     <task id="LOCAL-00001" summary="latest">
       <created>1598127294461</created>
@@ -230,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598902428578</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="latest">
+      <created>1598989599969</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598989599969</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,9 +271,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598621087251" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1598902430090">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1598989602064">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1598902430090" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1598989602064" />
   </component>
 </project>

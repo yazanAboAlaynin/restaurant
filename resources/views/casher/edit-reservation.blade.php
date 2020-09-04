@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.casher2')
 
 @section('content')
     <div class="container-fluid " style="background-image: url({{asset('images/chef2.jpg')}});
-    height: 500px;
-    width: 100%;
+        height: 500px;
+        width: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -15,7 +15,7 @@
                     <div class="card-header" style="">{{ __('Reserve') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('reserve') }}">
+                        <form method="POST" action="{{ route('casher.update.reservation',$reservation) }}">
                             @csrf
 
                             <div class="form-group row">
@@ -24,10 +24,10 @@
                                 <div class="col-md-8">
                                     <div class="container">
                                         <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <input type="datetime-local" class="form-control" id="date" name="date">
+                                            <input type="datetime-local" name="date" id="date" value="{{old('date') ?? $reservation->date->format('Y-m-d\TH:i')}}" class="form-control" >
                                         </div>
                                     </div>
-                                    @error('email')
+                                    @error('date')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -39,7 +39,7 @@
                                 <label for="number" class="col-md-6 col-form-label ">{{ __('Persons Number') }}</label>
 
                                 <div class="col-md-4">
-                                    <input id="number" type="number" class="form-control @error('number') is-invalid @enderror" name="number" required>
+                                    <input id="number" type="number" value="{{old('number') ?? $reservation->number}}" class="form-control @error('number') is-invalid @enderror" name="number" required>
 
                                     @error('number')
                                     <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                             <div class="form-group row mb-0">
                                 <div class="col-md-12">
                                     <button type="submit" class="btn btn-warning w-100">
-                                        {{ __('Reserve') }}
+                                        {{ __('Edit') }}
                                     </button>
 
 

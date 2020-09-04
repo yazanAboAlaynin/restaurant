@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.casher2')
 
 @section('content')
     <div class="container-fluid " style="background-image: url({{asset('images/chef2.jpg')}});
-    height: 500px;
-    width: 100%;
+        height: 500px;
+        width: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -15,7 +15,7 @@
                     <div class="card-header" style="">{{ __('Reserve') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('reserve') }}">
+                        <form method="POST" action="{{ route('casher.reserve') }}">
                             @csrf
 
                             <div class="form-group row">
@@ -24,7 +24,7 @@
                                 <div class="col-md-8">
                                     <div class="container">
                                         <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <input type="datetime-local" class="form-control" id="date" name="date">
+                                            <input type="datetime-local" name="date" class="form-control" id="date">
                                         </div>
                                     </div>
                                     @error('email')

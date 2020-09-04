@@ -43,6 +43,6 @@ class HomeController extends Controller
         $reservation->user_id = auth()->user()->id;
         $reservation->save();
 
-        return redirect()->route('user.home');
+        return redirect()->route('home');
     }
 }
