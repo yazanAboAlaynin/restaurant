@@ -57,27 +57,27 @@
 
     <!-- Container (The Band Section) -->
     <div id="user" class="container text-center">
-        <h3>User</h3>
-        <p><em>Start shopping with us</em></p>
-        <p>The site shows you the products in simple ways</p>
+        <h3>Welcome</h3>
+        <p><em>Reserve in our restaurant</em></p>
+
         <br>
         <br>
 
-        <a class="btn btn-info" style="color: #000;" href="">Start Shopping</a>
+        <a class="btn btn-warning" style="color: #000;" href="">Reserve</a>
 
     </div>
 
     <!-- Container (TOUR Section) -->
     <div id="vendor" class="bg-1">
         <div class="container text-center">
-            <h3>Vendor</h3>
-            <p><em>Start your business with us</em></p>
-            <p>The site offers dealing in the simplest way</p>
+            <h3>Meals</h3>
+            <p><em>our meals is The best</em></p>
+
             <br>
             <br>
 
 
-            <a class="btn btn-info" style="color: #000;" href="">Start Business</a>
+            <a class="btn btn-outline-warning" style="color: #000;" href="">View</a>
 
         </div>
 
@@ -91,7 +91,7 @@
             <div class="col-md-4">
                 <p><span class="glyphicon glyphicon-map-marker"></span> Syria</p>
                 <p><span class="glyphicon glyphicon-phone"></span> Phone: 0900000000</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> Email: smartMarket@gmail.com</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> Email: test@gmail.com</p>
             </div>
         </div>
         <br>

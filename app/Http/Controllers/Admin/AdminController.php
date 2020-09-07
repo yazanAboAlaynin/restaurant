@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Bill;
+
 use App\Casher;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Meal;
 use App\Reservation;
 use App\Reservation_item;
+use Carbon\Carbon;
+use Chartisan\PHP\Chartisan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
 use Yajra\DataTables\Facades\DataTables;
@@ -28,7 +31,21 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $income = Reservation_item::select('created_at',DB::raw('SUM(tot_price) AS total'))
+            ->where(DB::raw("month(created_at)"),
+                Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->toDateTimeString())->month)
+            ->orderBy("created_at")
+            ->groupBy(DB::raw("day(created_at)"));
+
+        $vals = $income->pluck('total')
+            ->toArray();
+
+        $days = $income->selectRaw('day(created_at) as date')->pluck('date')
+            ->toArray();
+
+
+
+        return view('admin.home',compact('vals','days'));
     }
 
     public function createCasher(){
@@ -320,6 +337,10 @@ class AdminController extends Controller
     public function deleteOrder(Request $request){
         Reservation_item::destroy($request->id);
         return response([],200);
+    }
+
+    public function income(){
+
     }
 
 

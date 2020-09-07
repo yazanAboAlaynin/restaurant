@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Meal;
 use App\Reservation;
 use Illuminate\Http\Request;
 
@@ -44,5 +45,14 @@ class HomeController extends Controller
         $reservation->save();
 
         return redirect()->route('home');
+    }
+
+    public function meals(){
+        $meals = Meal::all();
+        return view('user.meals',compact('meals'));
+    }
+    public function showMeal(Meal $meal){
+
+        return view('user.show-meal',compact('meal'));
     }
 }

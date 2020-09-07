@@ -23,11 +23,15 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/reservation', 'HomeController@reservation')->name('reservation');
 Route::post('/reserve', 'HomeController@reserve')->name('reserve');
+Route::get('/meals', 'HomeController@meals')->name('meals');
+Route::get('/show/meal/{meal}', 'HomeController@showMeal')->name('show.meal');
+
 
 
 Route::namespace('Admin')->prefix('admin')->as('admin.')->group(function() {
     Auth::routes(['register' => false]);
     Route::get('/home', 'AdminController@index')->name('home');
+    Route::get('/income', 'AdminController@income')->name('income');
 
     Route::get('/create/casher', 'AdminController@createCasher')->name('create.casher');
     Route::post('/store/casher', 'AdminController@storeCasher')->name('store.casher');
