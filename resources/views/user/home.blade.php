@@ -63,7 +63,7 @@
         <br>
         <br>
 
-        <a class="btn btn-warning" style="color: #000;" href="">Reserve</a>
+        <a class="btn btn-warning" style="color: #000;" href="{{ route('reservation') }}">Reserve</a>
 
     </div>
 
@@ -77,7 +77,7 @@
             <br>
 
 
-            <a class="btn btn-outline-warning" style="color: #000;" href="">View</a>
+            <a class="btn btn-outline-warning" style="color: #000;" href="{{route('meals')}}">View</a>
 
         </div>
 

@@ -58,6 +58,7 @@
     <!-- Container (The Band Section) -->
     <div id="chart" style="height: 300px;"></div>
     <!-- Charting library -->
+    <div class="text-center"><h2>This Month Income</h2></div>
 <div class="container">
     <div class="row ">
         <div class="col-md-12">
@@ -107,7 +108,7 @@
             <br>
 
 
-            <a class="btn btn-outline-warning" style="color: #000;" href="">View</a>
+            <a class="btn btn-outline-warning" style="color: #000;" href="{{route('admin.meals')}}">View</a>
         </div>
     </div>
 

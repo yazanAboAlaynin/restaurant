@@ -63,21 +63,19 @@
         <br>
         <br>
 
-        <a class="btn btn-warning" style="color: #000;" href="">Reserve</a>
+        <a class="btn btn-warning" style="color: #000;" href="{{route('casher.reservation')}}">Reserve</a>
 
     </div>
 
     <!-- Container (TOUR Section) -->
     <div id="vendor" class="bg-1">
         <div class="container text-center">
-            <h3>Meals</h3>
-            <p><em>our meals is The best</em></p>
-
-            <br>
-            <br>
+            <h3>Reservations</h3>
+            <p><em>You can control the reservations from here</em></p>
 
 
-            <a class="btn btn-outline-warning" style="color: #000;" href="">View</a>
+
+            <a class="btn btn-outline-warning" style="color: #000;" href="{{route('casher.reservations')}}">View</a>
 
         </div>
 
