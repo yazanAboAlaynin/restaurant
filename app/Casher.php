@@ -31,4 +31,8 @@ class Casher extends Authenticatable
     public function reserveItems(){
         return $this->hasMany(Reservation_item::class);
     }
+
+    public function reports(){
+        return $this->hasMany(Report::class);
+    }
 }

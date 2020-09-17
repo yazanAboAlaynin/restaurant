@@ -17,7 +17,7 @@
 
                 <th>id</th>
                 <th>reservation id</th>
-                <th>meal id</th>
+                <th>meal</th>
                 <th>casher id</th>
                 <th>quantity</th>
                 <th>tot_price</th>
@@ -57,7 +57,17 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'reservation_id', name: 'reservation_id'},
-                    {data: 'meal_id', name: 'meal_id'},
+                    {
+                        "name": "meal",
+                        "data": "meal",
+                        "render": function (data, type, full, meta) {
+                            data  = data == null ? 'deleted':data.name;
+                            return data;
+                        },
+                        "title": "meal",
+                        "orderable": true,
+                        "searchable": true
+                    },
                     {data: 'casher_id', name: 'casher_id'},
 
                     {data: 'quantity', name: 'quantity'},

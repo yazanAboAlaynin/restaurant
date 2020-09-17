@@ -19,11 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="latest">
+    <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="Finished">
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/add-report.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/edit-report.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/order-quantity.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/casher/reports.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/casher/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/casher/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Casher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Casher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/casher/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/casher/orders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,20 +162,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/casher" />
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\layouts" />
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\casher" />
-      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\user" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Restaurant\public\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Restaurant\resources\views\casher" />
+      <recent name="C:\xampp\htdocs\Restaurant\resources\views\layouts" />
+      <recent name="C:\xampp\htdocs\Restaurant\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
+      <recent name="C:\xampp\htdocs\Restaurant\resources\views\user" />
     </key>
   </component>
   <component name="RunManager">
@@ -210,7 +217,21 @@
       <workItem from="1599495818686" duration="2935000" />
       <workItem from="1599590970242" duration="345000" />
       <workItem from="1599591667858" duration="336000" />
-      <workItem from="1599748661135" duration="501000" />
+      <workItem from="1599748661135" duration="682000" />
+      <workItem from="1599749714233" duration="21000" />
+      <workItem from="1599839281074" duration="63000" />
+      <workItem from="1599841060044" duration="16000" />
+      <workItem from="1600018610756" duration="1957000" />
+      <workItem from="1600097793416" duration="35000" />
+      <workItem from="1600098098800" duration="31000" />
+      <workItem from="1600100593922" duration="1608000" />
+      <workItem from="1600197544713" duration="3094000" />
+      <workItem from="1600236731751" duration="237000" />
+      <workItem from="1600253483861" duration="393000" />
+      <workItem from="1600259035652" duration="1598000" />
+      <workItem from="1600270074159" duration="3674000" />
+      <workItem from="1600273867993" duration="98000" />
+      <workItem from="1600282448252" duration="2427000" />
     </task>
     <task id="LOCAL-00001" summary="latest">
       <created>1598127294461</created>
@@ -268,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599499638158</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished">
+      <created>1599749227277</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599749227277</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +316,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="latest" />
-    <option name="LAST_COMMIT_MESSAGE" value="latest" />
+    <MESSAGE value="Finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599476106192">
@@ -303,9 +332,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598621087251" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1599499639950">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1599749230040">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599499639950" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599749230040" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600198362462">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600198362462" />
   </component>
 </project>

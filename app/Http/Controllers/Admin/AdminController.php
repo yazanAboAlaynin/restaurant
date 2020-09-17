@@ -179,6 +179,11 @@ class AdminController extends Controller
     }
 
     public function deleteCategory(Request $request){
+       $cat = Category::find($request->id);
+       $meals = $cat->meals()->get();
+       foreach ($meals as $meal){
+           $meal->delete();
+       }
         Category::destroy($request->id);
         return response([],200);
     }

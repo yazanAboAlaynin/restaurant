@@ -77,9 +77,19 @@ Route::namespace('Casher')->prefix('casher')->as('casher.')->group(function() {
 
     Route::get('/reservation/{reservation}/orders', 'CasherController@orders')->name('orders');
     Route::get('/order/{order}/edit', 'CasherController@editOrder')->name('edit.order');
+    Route::get('/order/quantity', 'CasherController@orderQuantity')->name('order.quantity');
+    Route::get('/order/store/quantity/{ords}', 'CasherController@storeOrderQuantity')->name('store.order.quantity');
     Route::post('/order/{order}/update', 'CasherController@updateOrder')->name('update.order');
     Route::post('/order/delete', 'CasherController@deleteOrder')->name('delete.order');
     Route::get('/reservation/{reservation}/order', 'CasherController@addOrder')->name('add.order');
     Route::post('/reservation/{reservation}/store/order', 'CasherController@storeOrder')->name('store.order');
+
+    Route::get('/reports', 'CasherController@reports')->name('reports');
+    Route::get('/add/report', 'CasherController@addReport')->name('add.report');
+    Route::post('/store/report', 'CasherController@storeReport')->name('store.report');
+    Route::get('/report/{report}/edit', 'CasherController@editReport')->name('edit.report');
+    Route::post('/report/{report}/update', 'CasherController@updateReport')->name('update.report');
+    Route::post('/report/delete', 'CasherController@deleteReport')->name('delete.report');
+
 });
 
