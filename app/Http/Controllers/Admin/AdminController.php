@@ -7,6 +7,7 @@ use App\Casher;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Meal;
+use App\Report;
 use App\Reservation;
 use App\Reservation_item;
 use Carbon\Carbon;
@@ -43,9 +44,18 @@ class AdminController extends Controller
         $days = $income->selectRaw('day(created_at) as date')->pluck('date')
             ->toArray();
 
+        $outcomes = Report::select('created_at',DB::raw('SUM(outcome) AS total'))
+            ->where(DB::raw("year(created_at)"),Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->toDateTimeString())->year)
+
+            ->orderBy("created_at")
+            ->groupBy(DB::raw("day(created_at)"));
+
+        $outcomes = $outcomes->pluck('total')
+            ->toArray();
 
 
-        return view('admin.home',compact('vals','days'));
+
+        return view('admin.home',compact('vals','days','outcomes'));
     }
 
     public function createCasher(){
@@ -344,9 +354,57 @@ class AdminController extends Controller
         return response([],200);
     }
 
-    public function income(){
+    public function editReport(Request $request,Report $report)
+    {
+        return view('admin.edit-report',compact('report'));
+    }
+    public function updateReport(Request $request,Report $report){
+
+        $request->validate([
+            'content'=> 'required',
+            'income'=> 'required',
+            'outcome'=> 'required',
+            'days_off'=> 'required',
+        ]);
+        $report->content = $request['content'];
+        $report->income = $request['income'];
+        $report->outcome = $request['outcome'];
+        $report->days_off = $request['days_off'];
+        $report->casher_id = auth()->user()->id;
+        $report->save();
+
+        return redirect()->route('admin.reports');
+    }
+
+    public function reports(Request $request){
+        if($request->ajax())
+        {
+            $data = Report::latest()->get();
+
+            return DataTables::of($data)
+                ->addColumn('action', function($data){
+                    $button = '<div class="btn-group" role="group" aria-label="Basic example">';
+                    $button .= '<button type="button" name="edit" id="'.$data->id.'"
+                    class="edit btn btn-primary btn-sm" onclick=update('.$data->id.')>Edit</button>';
+                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="delete" id="'.$data->id.'"
+                    class="delete btn btn-danger btn-sm" onclick=del('.$data->id.')>Delete</button>';
+
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+
+        }
+
+        return view('admin.reports');
 
     }
+
+    public function deleteReport(Request $request){
+        Report::destroy($request->id);
+        return;
+    }
+
 
 
 }

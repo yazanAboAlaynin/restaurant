@@ -61,6 +61,10 @@ Route::namespace('Admin')->prefix('admin')->as('admin.')->group(function() {
     Route::get('/reservation/{reservation}/orders', 'AdminController@orders')->name('orders');
     Route::post('/order/delete', 'AdminController@deleteOrder')->name('delete.order');
 
+    Route::get('/reports', 'AdminController@reports')->name('reports');
+    Route::get('/report/{report}/edit', 'AdminController@editReport')->name('edit.report');
+    Route::post('/report/{report}/update', 'AdminController@updateReport')->name('update.report');
+    Route::post('/report/delete', 'CasherController@deleteReport')->name('delete.report');
 
 });
 

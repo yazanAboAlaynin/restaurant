@@ -68,6 +68,8 @@
                     <th scope="col">#</th>
                     <th scope="col">Day</th>
                     <th scope="col">Income</th>
+                    <th scope="col">Outcome</th>
+                    <th scope="col">Total</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -76,6 +78,8 @@
                     <th scope="row">{{$k}}</th>
                     <td>{{$day}}</td>
                     <td>{{$vals[$k]}}</td>
+                    <td>{{$outcomes[$k]}}</td>
+                    <td>{{$vals[$k] - $outcomes[$k]}}</td>
                 </tr>
                 @endforeach
 

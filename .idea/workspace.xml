@@ -20,16 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef617aa7-6bed-4cd7-85d8-3cff5d5a9aad" name="Default" comment="Finished">
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/add-report.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/edit-report.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/order-quantity.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/casher/reports.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/edit-report.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/reports.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Casher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Casher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Charts/SampleChart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts/SampleChart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Casher/CasherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/casher/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/casher/orders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/casher/add-report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/casher/add-report.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/casher/edit-report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/casher/edit-report.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,20 +161,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/casher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Restaurant\resources\views\admin" />
       <recent name="C:\xampp\htdocs\Restaurant\resources\views\casher" />
       <recent name="C:\xampp\htdocs\Restaurant\resources\views\layouts" />
-      <recent name="C:\xampp\htdocs\Restaurant\resources\views\admin" />
       <recent name="C:\xampp\htdocs\Restaurant\public\images" />
       <recent name="C:\xampp\htdocs\Restaurant\resources\views\user" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Restaurant\public\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -232,6 +231,8 @@
       <workItem from="1600270074159" duration="3674000" />
       <workItem from="1600273867993" duration="98000" />
       <workItem from="1600282448252" duration="2427000" />
+      <workItem from="1600324723453" duration="814000" />
+      <workItem from="1600357354161" duration="3407000" />
     </task>
     <task id="LOCAL-00001" summary="latest">
       <created>1598127294461</created>
@@ -296,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599749227277</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finished">
+      <created>1600324755224</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600324755225</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,10 +328,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Finished" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599476106192">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600359255700">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599476106192" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600359255700" />
     <state x="367" y="0" width="646" height="728" key="#phpunit.xml" timestamp="1599412517184">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -332,10 +340,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598621087251" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1599749230040">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1600324757076">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599749230040" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600324757076" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600198362462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

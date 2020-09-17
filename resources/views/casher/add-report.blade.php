@@ -36,23 +36,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="outcome"
-                                           class="col-md-4 col-form-label text-md-right">{{ __('Outcome') }}</label>
 
-                                    <div class="col-md-8">
-                                        <input id="outcome" type="text"
-                                               class="form-control @error('outcome') is-invalid @enderror"
-                                               name="outcome" required autocomplete="outcome" autofocus>
-
-
-                                        @error('outcome')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
                                 <div class="form-group row">
                                     <label for="content"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Days off') }}</label>

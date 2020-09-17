@@ -218,13 +218,12 @@ class CasherController extends Controller
         $request->validate([
             'content'=> 'required',
             'income'=> 'required',
-            'outcome'=> 'required',
             'days_off'=> 'required',
         ]);
         $r = new Report();
         $r->content = $request['content'];
         $r->income = $request['income'];
-        $r->outcome = $request['outcome'];
+        $r->outcome = '';
         $r->days_off = $request['days_off'];
         $r->casher_id = auth()->user()->id;
         $r->save();
@@ -242,12 +241,10 @@ class CasherController extends Controller
         $request->validate([
             'content'=> 'required',
             'income'=> 'required',
-            'outcome'=> 'required',
             'days_off'=> 'required',
         ]);
         $report->content = $request['content'];
         $report->income = $request['income'];
-        $report->outcome = $request['outcome'];
         $report->days_off = $request['days_off'];
         $report->casher_id = auth()->user()->id;
         $report->save();

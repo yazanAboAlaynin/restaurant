@@ -13,7 +13,7 @@
                     <div class="card-header bg-white border-0 text-center ">
 
                         <div class="card-body ">
-                            <form method="POST" action="{{ route('casher.update.report',$report) }}">
+                            <form method="POST" action="{{ route('admin.update.report',$report) }}">
                                 @csrf
                                 <div class=" border-0 pt-1 pb-3">
                                     <h2 class="text-center">{{ __('Add Report') }}</h2>
@@ -30,6 +30,23 @@
 
 
                                         @error('income')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="outcome"
+                                           class="col-md-4 col-form-label text-md-right">{{ __('Outcome') }}</label>
+
+                                    <div class="col-md-8">
+                                        <input type="text" id="outcome" value="{{ old('outcome')??$report->outcome }}"
+                                               class="form-control @error('outcome') is-invalid @enderror" name="outcome"
+                                               required autocomplete="outcome" autofocus>
+
+
+                                        @error('outcome')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
